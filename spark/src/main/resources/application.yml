@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  contextPath : /spark
+spring:
+  application:
+    name: spark
+logging:
+  file: logs/spark.log
+  level:
+    ROOT: INFO
+    org.apache.ibatis: debug
+    java.sql.Connection: debug
+
+
