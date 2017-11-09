@@ -1,5 +1,6 @@
 package com.lakala.spark.util;
 
+
 import org.apache.log4j.Logger;
 
 import java.util.ResourceBundle;

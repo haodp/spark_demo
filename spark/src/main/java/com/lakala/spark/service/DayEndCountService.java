@@ -14,7 +14,6 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.PairFunction;
-import org.springframework.stereotype.Service;
 import scala.Tuple2;
 
 import java.io.File;
@@ -27,7 +26,6 @@ import java.util.List;
 /**
  * Created by user on 2017/10/30.
  */
-@Service
 public class DayEndCountService implements java.io.Serializable {
 
     /**
@@ -139,7 +137,8 @@ public class DayEndCountService implements java.io.Serializable {
             map.put(Constants.PARAM_CNT, cnt);
             map.put(Constants.PARAM_STOREID, storeId);
             map.put(Constants.PARAM_MERNAME, name);
-            map.put(Constants.PARAM_FEE, allmoney.divide(new BigDecimal(120)));
+            BigDecimal fee = allmoney.divide(new BigDecimal(120), 2, BigDecimal.ROUND_HALF_UP);
+            map.put(Constants.PARAM_FEE, fee);
             listResult.add(map);
         }
         sc.stop();

@@ -1,23 +1,8 @@
 package com.lakala.spark.service;
 
-import com.lakala.spark.Constants.Constants;
-import com.lakala.spark.util.DateUtils;
-import com.lakala.spark.util.FileUtils;
-import com.lakala.spark.util.PropertiseUtil;
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.sql.*;
-import org.springframework.stereotype.Service;
-import java.io.File;
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * Created by user on 2017/10/30.
  */
-@Service
 public class OracleToFileService_backup implements java.io.Serializable {
 
     public void selectOracleToFile() {

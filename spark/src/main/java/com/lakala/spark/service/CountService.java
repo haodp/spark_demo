@@ -11,7 +11,6 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.PairFunction;
-import org.springframework.stereotype.Service;
 import scala.Tuple2;
 
 import java.io.File;
@@ -23,7 +22,6 @@ import java.util.Iterator;
 /**
  * Created by user on 2017/10/30.
  */
-@Service
 public class CountService implements java.io.Serializable {
 
     /**
